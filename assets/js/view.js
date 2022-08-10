@@ -9,20 +9,26 @@ document.querySelector("form").addEventListener("submit", (event) => {
   localStorage.setItem("searchValue", inputValFromHomePage);
   document.getElementById("searchInputOfView").value =
     localStorage.getItem("searchValue");
+  displayData();
 });
 
 displayData();
 
 async function displayData() {
   try {
-    let res = await fetch("https://jsonservermasai.herokuapp.com/brands");
+    let res = await fetch("https://jsonservermasai.herokuapp.com/brands/1");
+    // let res = await fetch(
+    //   `https://www.googleapis.com/customsearch/v1?key=AIzaSyCQqAYLecU4cYJO0lmlbVUGosxgypW-yO4&cx=f445f901939ce4ad1&q=${localStorage.getItem(
+    //     "searchValue"
+    //   )}`
+    // );
     let data = await res.json();
-
+    console.log(data);
     document.getElementById("showSearchDataSection").innerHTML = `
-    <div id="showrequestDataCount">About <span>${data[0].searchInformation.formattedTotalResults}</span> results (<span>${data[0].searchInformation.formattedSearchTime}</span> seconds)</div>
+    <div id="showrequestDataCount">About <span>${data.searchInformation.formattedTotalResults}</span> results (<span>${data.searchInformation.formattedSearchTime}</span> seconds)</div>
     <div id="searchItemsList"></div>
     `;
-    data[0].items.forEach((element) => {
+    data.items.forEach((element) => {
       let div = document.createElement("div");
       let urlPart = element.link.length - 1;
 
