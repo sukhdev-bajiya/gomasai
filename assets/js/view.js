@@ -23,7 +23,6 @@ async function displayData() {
     //   )}`
     // );
     let data = await res.json();
-    console.log(data);
     document.getElementById("showSearchDataSection").innerHTML = `
     <div id="showrequestDataCount">About <span>${data.searchInformation.formattedTotalResults}</span> results (<span>${data.searchInformation.formattedSearchTime}</span> seconds)</div>
     <div id="searchItemsList"></div>

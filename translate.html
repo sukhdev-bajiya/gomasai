@@ -16,9 +16,36 @@
     </section>
     <div style="height: 112px;"></div>
 
+    <section id="translatePartSection">
+        <div id="translateInputDiv">
+            <select name="" id="translateInputLuc">
+                <option value="en">English</option>
+            </select>
+            <textarea name="" id="noteInput_textarea" cols="30" rows="10"></textarea>
+            <div>
+                Select Voice: <select id='voiceList'></select>
+                <img src="./assets/img/micicon.png" onclick="translateInputStart()" id="noteInput_textarea_Img" alt="">
+                <img src="./assets/img/sound01.png" onclick="translateInputPlayStart()" id="notePlay_textarea_Img"
+                    alt="">
+            </div>
+        </div>
+        <p style="font-size: 25px; margin-top: -4px;"> &#x21cc;</p>
 
+        <div id="translateOutputDiv">
+            <select name="" id="translateOutLuc">
+                <option value="en">English</option>
+                <option value="hn">Hindi</option>
+            </select>
+            <textarea name="" id="" cols="30" rows="10"></textarea>
+            <div>
+                <img src="./assets/img/sound01.png" onclick="translateOutputPlayStart()" id="noteClonePlay_textarea_Img"
+                    alt="">
+            </div>
+        </div>
+    </section>
 </body>
 <script src="./assets/js/navbar.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="./assets/js/translate.js"></script>
 
 </html>
