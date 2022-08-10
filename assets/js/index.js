@@ -3,9 +3,10 @@ document.querySelector("form").addEventListener("submit", (event) => {
   event.preventDefault();
   inputValFromHomePage = document.getElementById("searchAnythingForm").value;
 
-  console.log(inputValFromHomePage);
-
+  // console.log(inputValFromHomePage);
+  localStorage.setItem("searchValue", inputValFromHomePage);
   document.getElementById("searchAnythingForm").value = "";
+  window.open("./view.html", "_Self");
 });
 
 // fetch("https://jsonservermasai.herokuapp.com/brands", {

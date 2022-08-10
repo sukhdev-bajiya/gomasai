@@ -1,0 +1,70 @@
+#showSearchDataSection {
+    width: 95%;
+    margin: auto;
+}
+
+#showrequestDataCount {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-family: Google Sans, arial, sans-serif;
+    padding: 5px 0;
+    font-size: 13px;
+    letter-spacing: 1px;
+    color: #505050;
+}
+
+#showrequestDataCount span {
+    font-weight: 600;
+}
+
+#searchItemsList {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px 0;
+    width: 80%;
+}
+
+#searchItemsList>div {
+    display: flex;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    border-radius: 0 8px 8px 0;
+    overflow: hidden;
+}
+
+#searchItemsList>div>div {
+    padding: 5px 10px 5px 5px;
+}
+
+#searchItemsList>div>div #searchUrl {
+    display: block;
+    text-decoration: none;
+    font-size: 14px;
+    color: #1d1d1d;
+    padding-bottom: 5px;
+}
+
+#searchItemsList>div>div #searchTitel {
+    display: block;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    padding-bottom: 5px;
+}
+
+#searchItemsList>div>div #searchTitel:hover {
+    text-decoration: underline;
+}
+
+#searchItemsList>div>div #searchDescription {
+    display: block;
+    text-decoration: none;
+    font-size: 14px;
+    color: #4d5156;
+}
+
+#searchItemsList>div>img {
+    height: 200px;
+    width: 350px;
+}
