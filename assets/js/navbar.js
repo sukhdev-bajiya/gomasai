@@ -1,6 +1,10 @@
 document.getElementById("navbarSection").innerHTML = `
     <div id="navbarTopPart">
         <img src="./assets/img/navbarlogo.png" alt="">
+        <div id="navlogopart">
+          <img src="./assets/img/09.png" alt="" />
+          <img src="./assets/img/navbarlogo.png" alt="" />
+        </div>
         <form action="">
             <input type="text" id="searchInputOfView" placeholder="Search...">
             <img src="./assets/img/micicon.png" id="miciconNavbarPart" alt="" onclick="runSpeechRecognition()">

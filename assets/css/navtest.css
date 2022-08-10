@@ -9,8 +9,8 @@
   -ms-user-select: none;
   user-select: none;
 }
-
-/* section {
+/* 
+section {
   min-width: 1024px;
   max-width: 1680px;
 } */
@@ -39,7 +39,6 @@
 #navbarTopPart > img:first-child {
   height: 35px;
 }
-
 #navlogopart {
   display: none;
 }
@@ -144,7 +143,7 @@
     /* align-self: flex-start; */
   }
   #navlogopart > img:last-child {
-    width: 150px;
+    width: 160px;
     padding: 5px;
     align-self: center;
     position: fixed;
