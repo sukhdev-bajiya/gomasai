@@ -13,13 +13,14 @@
     gap: 15px;
 }
 
-#translatePartSection>div select {
+#translatePartSection>div>select {
     font-size: 16px;
     padding: 3px 10px;
     font-weight: 600;
     letter-spacing: 1px;
     border-radius: 5px;
     border: 1px solid rgb(158, 158, 158);
+    cursor: pointer;
 }
 
 #translatePartSection>div textarea {
@@ -35,9 +36,45 @@
     display: flex;
     justify-content: end;
     padding-right: 25px;
-    gap: 25px;
+    gap: 20px;
+    align-items: center;
+    margin: auto;
 }
 
 #translatePartSection>div img {
     height: 25px;
+    cursor: pointer;
+}
+
+#translatePartSection>div>div>select {
+    font-size: 14px;
+    padding: 3px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    border: 1px solid rgb(158, 158, 158);
+    width: 60%;
+    cursor: pointer;
+}
+
+#translatePartSection>div>div>p {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+#translatePartSection>div>div>button {
+    font-size: 14px;
+    padding: 3px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    border: 1px solid rgb(158, 158, 158);
+    width: 251px;
+    cursor: pointer;
+    background: none;
+    cursor: pointer;
+}
+
+#translatePartSection>div>div>button:hover {
+    background: lavender;
 }

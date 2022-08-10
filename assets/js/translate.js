@@ -26,15 +26,6 @@ function translateInputStart() {
   recognition.start();
 }
 
-function translateInputPlayStart() {
-  document.getElementById("notePlay_textarea_Img").src =
-    "./assets/img/sound02.png";
-}
-// function translateOutputPlayStart() {
-//   document.getElementById("noteClonePlay_textarea_Img").src =
-//     "./assets/img/sound02.png";
-// }
-
 var txtInput = document.querySelector("#noteInput_textarea");
 var voiceList = document.querySelector("#voiceList");
 var btnSpeak = document.querySelector("#notePlay_textarea_Img");
@@ -69,6 +60,29 @@ function PopulateVoices() {
     listItem.setAttribute("data-name", voice.name);
     voiceList.appendChild(listItem);
   });
-
   voiceList.selectedIndex = selectedIndex;
+}
+
+async function changeWord() {
+  try {
+    let chLuc = document.getElementById("translateOutLuc").value;
+    let data = document.getElementById("noteInput_textarea");
+    console.log(data.value);
+    const res = await fetch("https://libretranslate.de/translate", {
+      method: "POST",
+      body: JSON.stringify({
+        q: data.value,
+        source: "en",
+        target: chLuc,
+        format: "text",
+      }),
+      headers: { "Content-Type": "application/json" },
+    });
+    let outputText = await res.json();
+
+    document.getElementById("noteOutput_textarea").textContent =
+      outputText.translatedText;
+  } catch (err) {
+    console.log(err);
+  }
 }
