@@ -16,12 +16,13 @@ displayData();
 
 async function displayData() {
   try {
-    let res = await fetch("https://jsonservermasai.herokuapp.com/brands/1");
-    // let res = await fetch(
-    //   `https://www.googleapis.com/customsearch/v1?key=AIzaSyCQqAYLecU4cYJO0lmlbVUGosxgypW-yO4&cx=f445f901939ce4ad1&q=${localStorage.getItem(
-    //     "searchValue"
-    //   )}`
-    // );
+    // let res = await fetch("https://jsonservermasai.herokuapp.com/brands/1");
+    let key = "AIzaSyCQqAYLecU4cYJO0lmlbVUGosxgypW-yO4";
+    let cxEng = "f445f901939ce4ad1";
+    let val = localStorage.getItem("searchValue");
+    let res = await fetch(
+      `https://www.googleapis.com/customsearch/v1?key=${key}&cx=${cxEng}&q=${val}`
+    );
     let data = await res.json();
     document.getElementById("showSearchDataSection").innerHTML = `
     <div id="showrequestDataCount">About <span>${data.searchInformation.formattedTotalResults}</span> results (<span>${data.searchInformation.formattedSearchTime}</span> seconds)</div>
@@ -31,7 +32,7 @@ async function displayData() {
       let div = document.createElement("div");
       let urlPart = element.link.length - 1;
 
-      let picUrl = "./assets/img/05.png";
+      let picUrl = "./assets/img/masai.jpg";
 
       if (element.pagemap.cse_thumbnail != undefined) {
         picUrl = element.pagemap.cse_thumbnail[0].src;
