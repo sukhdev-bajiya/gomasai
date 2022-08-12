@@ -12,13 +12,22 @@ document.querySelector("form").addEventListener("submit", (event) => {
   findSearchImages();
 });
 findSearchImages();
-async function findSearchImages(event) {
+async function findSearchImages() {
   try {
     let res = await fetch(
-      `https://api.unsplash.com/search/photos/?client_id=cLzf06En9a0VRkGQLH54-V1I_ga2FTLXkR0XIsYatko&query=${inputValFromHomePage}`
+      `https://api.pexels.com/v1/search?query=${localStorage.getItem(
+        "searchValue"
+      )}`,
+      {
+        method: "GET",
+        headers: {
+          Authorization:
+            "563492ad6f9170000100000192f32b8405cf4c8892a5a9150ee529f9",
+        },
+      }
     );
     let data = await res.json();
-    dishplayData(data.results);
+    dishplayData(data.photos);
   } catch (error) {
     console.log(error);
   }
@@ -28,10 +37,10 @@ function dishplayData(array) {
   document.getElementById("showSearchDataSection").innerHTML = "";
   array.forEach((data) => {
     let val = `
-      <img src="${data.urls.small}" alt="">
+      <img src="${data.src.original}" alt="">
       <div>
-        <h1>${data.user.name}</h1>
-        <p><span>Id : ${data.id}</span> <span>Likes : ${data.likes}</span></p>
+        <h1>${data.alt}</h1>
+        <p><span>Id : ${data.photographer_id}</span> <span>PG : ${data.photographer}</span></p>
       </div>
     `;
     let div = document.createElement("div");
