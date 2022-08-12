@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/img/favicon.png" type="image/x-icon">
+    <title>News || Gomasai</title>
+    <link rel="stylesheet" href="./assets/css/navbar.css">
+    <link rel="stylesheet" href="./assets/css/news.css">
+</head>
+
+<body>
+    <section id="navbarSection">
+    </section>
+    <div style="height: 112px;"></div>
+    <section id="showSearchNewsDataSection">
+        <div id="searchNews">
+            <div>
+                <label for=""></label>
+                <input type="text" id="queryForFilter">
+                <label for="">From</label>
+                <input type="date" id="fromDateForFilter">
+                <label for="">To</label>
+                <input type="date" id="toDateForFilter">
+                <input type="submit" onclick="showAllTime()">
+            </div>
+            <div>
+                <p>Sort News By :</p>
+
+                <label for="">Category</label>
+                <select name="" id="categoryForFilter">
+                    <option value="">All</option>
+                    <option value="business">Business</option>
+                    <option value="entertainment">Entertainment</option>
+                    <option value="general">General</option>
+                    <option value="health">Health</option>
+                    <option value="science">Science</option>
+                    <option value="sports">Sports</option>
+                    <option value="technology">Technology</option>
+                </select>
+
+                <label for="">Country</label>
+                <select name="" id="countryForFilter">
+                    <option value="in">India</option>
+                    <option value="ae">Argentina (AE)</option>
+                    <option value="ar">Argentina (AR)</option>
+                    <option value="at">Austria (AT)</option>
+                    <option value="au">Australia (AU)</option>
+                    <option value="be">Belgium (BE)</option>
+                    <option value="bg">Belgium (BG)</option>
+                    <option value="br">Belgium (BR)</option>
+                    <option value="ca">Canada (CA)</option>
+                    <option value="ch">Canada (CH)</option>
+                    <option value="cn">China (CN)</option>
+                    <option value="co">China (CO)</option>
+                    <option value="cu">China (CU)</option>
+                    <option value="cz">Czech Republic (CZ)</option>
+                    <option value="de">Germany (DE)</option>
+                    <option value="eg">Egypt (EG)</option>
+                    <option value="fr">France (FR)</option>
+                    <option value="gb">United Kingdom (GB)</option>
+                    <option value="gr">Greece (GR)</option>
+                    <option value="hk">Hong Kong (HK)</option>
+                    <option value="hu">Hungary (HU)</option>
+                    <option value="id">Hungary (ID)</option>
+                    <option value="ie">Ireland (IE)</option>
+                    <option value="il">Ireland (IL)</option>
+                    <option value="it">Italy (IT)</option>
+                    <option value="jp">Japan (JP)</option>
+                    <option value="kr">South Korea (KR)</option>
+                    <option value="lt">South Korea (LT)</option>
+                    <option value="lv">South Korea (LV)</option>
+                    <option value="ma">South Korea (MA)</option>
+                    <option value="mx">Mexico (MX)</option>
+                    <option value="my">Mexico (MY)</option>
+                    <option value="ng">Mexico (NG)</option>
+                    <option value="nl">Netherlands (NL)</option>
+                    <option value="no">Norway (NO)</option>
+                    <option value="nz">New Zealand (NZ)</option>
+                    <option value="ph">New Zealand (PH)</option>
+                    <option value="pl">New Zealand (PL)</option>
+                    <option value="pt">Portugal (PT)</option>
+                    <option value="ro">Portugal (RO)</option>
+                    <option value="rs">Portugal (RS)</option>
+                    <option value="ru">Russia (RU)</option>
+                    <option value="sa">Russia (SA)</option>
+                    <option value="se">Russia (SE)</option>
+                    <option value="sg">Russia (SG)</option>
+                    <option value="si">Russia (SI)</option>
+                    <option value="sk">Russia (SK)</option>
+                    <option value="th">Russia (TH)</option>
+                    <option value="tr">Russia (TR)</option>
+                    <option value="tw">Russia (TW)</option>
+                    <option value="ua">Russia (UA)</option>
+                    <option value="us">United States (US)</option>
+                    <option value="ve">United States (VE)</option>
+                    <option value="za">United States (ZA)</option>
+                </select>
+
+                <label for="">Language</label>
+                <select name="" id="languageForFilter">
+                    <option value="en">English</option>
+                    <option value="ar">Afrikaans (South Africa)</option>
+                    <option value="de">German (DE)</option>
+                    <option value="es">Spanish (ES)</option>
+                    <option value="fr">Spanish (FR)</option>
+                    <option value="he">Spanish (HE)</option>
+                    <option value="it">Italian (IT)</option>
+                    <option value="nl">Dutch (NL)</option>
+                    <option value="no">Dutch (NO)</option>
+                    <option value="pt">Portuguese (PT)</option>
+                    <option value="ru">Portuguese (RU)</option>
+                    <option value="sv">Portuguese (SV)</option>
+                    <option value="zh">Chinese (ZH)</option>
+                </select>
+
+                <input type="submit" onclick="showAllFiliterData()">
+            </div>
+        </div>
+        <div id="showSearchNewsData">
+        </div>
+    </section>
+    <section id="showNewsOneINOneSection">
+        <p onclick="closePlayVideo()">&#x21d0;</p>
+        <div id="showNewsOneINOneDiv">
+        </div>
+    </section>
+</body>
+<script src="./assets/js/navbar.js"></script>
+<script src="./assets/js/news.js"></script>
+
+</html>

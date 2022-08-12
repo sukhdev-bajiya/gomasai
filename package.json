@@ -1,0 +1,25 @@
+{
+  "name": "gomasai",
+  "version": "1.0.0",
+  "description": "user search engine ",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sukhdev-bajiya/gomasai.git"
+  },
+  "keywords": [
+    "masai",
+    "gomasai",
+    "search",
+    "engine"
+  ],
+  "author": "sukhdev bajiya, ayush kumar, akash surve",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sukhdev-bajiya/gomasai/issues"
+  },
+  "homepage": "https://github.com/sukhdev-bajiya/gomasai#readme"
+}
