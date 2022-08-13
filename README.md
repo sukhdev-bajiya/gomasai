@@ -39,8 +39,8 @@
 
 ## Team Members
 > ### •[Sukhdev Bajiya](https://github.com/sukhdev-bajiya)
-> ### • [Ayush Kumar](https://github.com/ayush-kr05)
 > ### •[Akash Surve](https://github.com/Akash2377)
+> ### • [Ayush Kumar](https://github.com/ayush-kr05)
 
 ## Technology Used
 > • HTML
