@@ -1,5 +1,5 @@
 #showSearchDataSection {
-    width: 95%;
+    width: 80%;
     margin: auto;
 }
 
@@ -23,7 +23,7 @@
     flex-direction: column;
     gap: 20px;
     padding: 10px 0;
-    width: 80%;
+    width: 100%;
 }
 
 #searchItemsList>div {
@@ -68,4 +68,91 @@
 #searchItemsList>div>img {
     height: 200px;
     width: 250px;
+}
+
+.showSearchDataSectionPart {
+    display: flex;
+}
+
+#masaiAds {
+    width: 19%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+#masaiAds>div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px 2px;
+    width: 100%;
+    position: sticky;
+    top: 120px;
+    height: auto;
+}
+
+#masaiAds>div>iframe {
+    width: 95%;
+}
+
+#masaiAds>div>p {
+    padding: 10px;
+    font-size: 12px;
+    text-align: justify;
+    letter-spacing: 0.5px;
+}
+
+.primary-btn {
+    display: inline-block;
+    font-size: 15px;
+    font-family: "Play", sans-serif;
+    font-weight: 700;
+    padding: 15px 20px 15px;
+    color: #00bfe7;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    z-index: 1;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.primary-btn:hover:before {
+    height: 100%;
+    width: 100%;
+}
+
+.primary-btn:hover:after {
+    height: 100%;
+    width: 100%;
+}
+
+.primary-btn:before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 30px;
+    width: 30px;
+    border-left: 2px solid #00bfe7;
+    border-top: 2px solid #00bfe7;
+    content: "";
+    z-index: -1;
+    -webkit-transition: all, 0.7s;
+    -o-transition: all, 0.7s;
+    transition: all, 0.7s;
+}
+
+.primary-btn:after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 30px;
+    width: 30px;
+    border-right: 2px solid #00bfe7;
+    border-bottom: 2px solid #00bfe7;
+    content: "";
+    z-index: -1;
+    -webkit-transition: all, 0.7s;
+    -o-transition: all, 0.7s;
+    transition: all, 0.7s;
 }
