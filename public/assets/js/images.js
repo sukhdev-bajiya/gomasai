@@ -14,18 +14,13 @@ document.querySelector("form").addEventListener("submit", (event) => {
 findSearchImages();
 async function findSearchImages() {
   try {
-    let res = await fetch(
-      `https://api.pexels.com/v1/search?query=${localStorage.getItem(
-        "searchValue"
-      )}`,
-      {
-        method: "GET",
-        headers: {
-          Authorization:
-            "563492ad6f9170000100000192f32b8405cf4c8892a5a9150ee529f9",
-        },
-      }
-    );
+    let res = await fetch("https://api.pexels.com/v1/search?query=people", {
+      method: "GET",
+      headers: {
+        Authorization:
+          "563492ad6f9170000100000192f32b8405cf4c8892a5a9150ee529f9",
+      },
+    });
     let data = await res.json();
     dishplayData(data.photos);
   } catch (error) {
@@ -48,3 +43,5 @@ function dishplayData(array) {
     document.getElementById("showSearchDataSection").append(div);
   });
 }
+
+// 563492ad6f9170000100000192f32b8405cf4c8892a5a9150ee529f9

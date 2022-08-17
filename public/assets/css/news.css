@@ -131,25 +131,3 @@
     border-bottom: 1px solid gray;
     padding: 15px 0;
 }
-
-#showNewsOneINOneDiv>div>h2 {
-    margin-bottom: 20px;
-
-}
-
-#showNewsOneINOneDiv>div>a {
-    margin: 30px 0;
-    border-top: 1px solid gray;
-    border-bottom: 1px solid gray;
-    padding: 5px 10px;
-    text-decoration: none;
-    color: white;
-    font-size: 16px;
-    font-weight: 600;
-    letter-spacing: 1px;
-}
-
-#showNewsOneINOneDiv>div>a:hover {
-    background-color: white;
-    color: rgb(0, 0, 0);
-}
