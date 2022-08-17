@@ -43,6 +43,7 @@
     color: white;
     display: none;
     background-color: #888888cb;
+    z-index: 6;
 }
 
 #youtubeVideoPlayer>div {
