@@ -77,4 +77,4 @@
 > ### •[GoMasai Firebase](https://gomasai.web.app/)
 
 ## Blog link
-> ### •[GoMasai](https://gomasai.hashnode.dev/gomasai)
+> ### •[GoMasai](https://gomasai.hashnode.dev/gomasai-1)
