@@ -32,6 +32,8 @@
     border-radius: 0 8px 8px 0;
     overflow: hidden;
     justify-content: space-between;
+    padding: 15px;
+    margin: 10px;
 }
 
 #searchItemsList>div>div {

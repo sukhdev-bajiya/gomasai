@@ -16,40 +16,36 @@ displayData();
 
 async function displayData() {
   try {
-    // let res = await fetch("https://jsonservermasai.herokuapp.com/brands/1");
-    let key = "AIzaSyCQqAYLecU4cYJO0lmlbVUGosxgypW-yO4";
-    let cxEng = "f445f901939ce4ad1";
     let val = localStorage.getItem("searchValue");
     let res = await fetch(
-      `https://www.googleapis.com/customsearch/v1?key=${key}&cx=${cxEng}&q=${val}`
+      `https://gomasai.herokuapp.com/gomasai?q=${val}&_page=${1}&_limit=${15}`
     );
     let data = await res.json();
     document.getElementById("showSearchDataSection").innerHTML = `
-    <div id="showrequestDataCount">About <span>${data.searchInformation.formattedTotalResults}</span> results (<span>${data.searchInformation.formattedSearchTime}</span> seconds)</div>
     <div id="searchItemsList"></div>
     `;
-    data.items.forEach((element) => {
+    /* 
+  if(data.length > 15){
+    extArr -- fix
+    for(let i=0; i<(15-data.length); i++){
+      data.push(extArr);
+    }
+  }
+*/
+
+    data.forEach((element) => {
       let div = document.createElement("div");
-      let urlPart = element.link.length - 1;
-
-      let picUrl = "./assets/img/masai.jpg";
-
-      if (element.pagemap.cse_thumbnail != undefined) {
-        picUrl = element.pagemap.cse_thumbnail[0].src;
-      }
       div.innerHTML = `
       <div>
-          <a href="${element.link.slice(
-            0,
-            urlPart
-          )}" target="_blank" id="searchUrl">${element.displayLink}</a>
-          <a href="${element.link.slice(
-            0,
-            urlPart
-          )}" target="_blank" id="searchTitel">${element.htmlTitle}</a>
-          <p id="searchDescription">${element.htmlSnippet}...</p>
+          <a href="${element.wesiteUrl}" target="_blank" id="searchUrl">${
+        element.urlLinkPath
+      }</a>
+          <a href="${element.wesiteUrl}" target="_blank" id="searchTitel">${
+        element.titel
+      }</a>
+          <p id="searchDescription">${element.description.slice(0, 150)}...</p>
+          <p id="searchDescription">${element.subDescription.slice(0, 150)}</p>
       </div>
-      <img src="${picUrl}"alt="">
       `;
 
       document.getElementById("searchItemsList").append(div);
