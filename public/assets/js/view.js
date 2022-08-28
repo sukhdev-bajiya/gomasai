@@ -289,10 +289,7 @@ async function displayData() {
       for (let i = 0; i < newLangth; i++) {
         data.push(myArray[i]);
       }
-      console.log("first");
     }
-    console.log(data);
-    console.log(myArray);
     data.forEach((element) => {
       let div = document.createElement("div");
       div.innerHTML = `
