@@ -11,8 +11,9 @@
 ## 📋 Result page
 - Once you press Enter, the results of the text you have entered in the search bar will be displayed.
 
-<!-- ![image](https://cdn.hashnode.com/res/hashnode/image/upload/v1660329610395/WUElB-lJu.png) -->
-![image](https://user-images.githubusercontent.com/106476212/185294739-f09b6655-0c34-4a27-9d37-5a7f09c9a1af.png)
+<!-- ![image](https://cdn.hashnode.com/res/hashnode/image/upload/v1660329610395/WUElB-lJu.png)
+![image](https://user-images.githubusercontent.com/106476212/185294739-f09b6655-0c34-4a27-9d37-5a7f09c9a1af.png)  -->
+![image](https://user-images.githubusercontent.com/106476212/187071386-5fe0b105-b596-4de3-bb9d-86c13f8575b8.png)
 
 
 ## 📰 News page
