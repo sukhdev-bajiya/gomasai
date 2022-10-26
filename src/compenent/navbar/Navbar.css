@@ -8,10 +8,12 @@
   border-bottom: 0.005px solid rgb(148, 133, 133);
   font-family: Arial, Helvetica, sans-serif;
 }
-.NavBarSearchDiv > img {
+
+.NavBarSearchDiv>img {
   width: 180px;
 }
-.NavBarSearchDiv > form {
+
+.NavBarSearchDiv>form {
   display: flex;
   align-items: center;
 
@@ -20,15 +22,18 @@
   padding: 0 10px;
   box-shadow: 0 2px 5px 1px rgb(64 60 67 / 16%);
 }
-.NavBarSearchDiv > form:hover {
+
+.NavBarSearchDiv>form:hover {
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
-.NavBarSearchDiv > form > img {
+
+.NavBarSearchDiv>form>img {
   width: 20px;
   margin: 0 10px;
   cursor: pointer;
 }
-.NavBarSearchDiv > form > input:first-child {
+
+.NavBarSearchDiv>form>input:first-child {
   font-size: 16px;
   padding: 5px 10px;
   width: 415px;
@@ -37,7 +42,8 @@
   background: none;
   border-right: 1px solid gray;
 }
-.NavBarSearchDiv > form > input[type="submit"] {
+
+.NavBarSearchDiv>form>input[type="submit"] {
   background: none;
   border: none;
   border-radius: 50%;
@@ -51,6 +57,7 @@
   width: 46px;
   margin: 5px;
 }
+
 #navbarBottomPart {
   display: flex;
   align-items: center;
@@ -70,13 +77,16 @@
   letter-spacing: 1px;
   color: #5f6368;
 }
+
 #navbarBottomPart a svg {
   height: 20px;
 }
-@media all and (max-width: 700px) {
-  .NavBarSearchDiv > img {
+
+@media all and (max-width: 1000px) {
+  .NavBarSearchDiv>img {
     width: 150px;
   }
+
   .NavBarSearchDiv {
     display: flex;
     flex-direction: column;
@@ -87,15 +97,18 @@
 
     border-bottom: 1px solid black;
   }
-  .NavBarSearchDiv > form > input[type="submit"] {
+
+  .NavBarSearchDiv>form>input[type="submit"] {
     font-size: 30px;
     border-radius: 50%;
     font-weight: 300;
   }
-  .NavBarSearchDiv > form {
+
+  .NavBarSearchDiv>form {
     height: 40px;
   }
-  .NavBarSearchDiv > form > input:first-child {
+
+  .NavBarSearchDiv>form>input:first-child {
     font-size: 16px;
     padding: 5px 10px;
     width: 250px;
@@ -104,17 +117,21 @@
     background: none;
     border-right: 1px solid gray;
   }
+
   #navbarBottomPart a svg {
     height: 14px;
   }
-  .NavBarSearchDiv > form > img {
+
+  .NavBarSearchDiv>form>img {
     width: 15px;
     margin: 0 10px;
   }
+
   #navbarBottomPart a {
     gap: 5px;
     font-size: 14px;
   }
+
   #navbarBottomPart {
     display: flex;
     align-items: center;
