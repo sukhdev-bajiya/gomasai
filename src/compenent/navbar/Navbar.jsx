@@ -4,12 +4,20 @@ import GoMasai from "../../assets/images/navbarlogo.png";
 import MicIcon from "../../assets/images/micicon.png";
 import { Link } from "react-router-dom";
 const Navbar = () => {
+
+  const [searchValue, setSearchValue] = React.useState("");
+
+  const searchResult = (event) => {
+    event.preventDefault();
+    console.log(searchValue)
+  }
+
   return (
     <div className="NavBarMainContainer">
       <div className="NavBarSearchDiv">
         <img src={GoMasai} alt="GoMasai"></img>
-        <form action="submit">
-          <input type="text" placeholder="Search..." />
+        <form onSubmit={searchResult}>
+          <input type="text" placeholder="Search..." value={searchValue} onChange={(e) => setSearchValue(e.target.value)} />
           <img src={MicIcon} alt="Mic Icon"></img>
           <input type="submit" value="&#9740;" />
         </form>

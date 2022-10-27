@@ -43,7 +43,6 @@ function Home() {
 
         localStorage.setItem('userlogindata', JSON.stringify(userObject))
         setUser(userObject)
-        console.log(data)
     }
 
     const [searchValue, setSearchValue] = React.useState("");
@@ -51,7 +50,6 @@ function Home() {
     const searchResult = (event) => {
         event.preventDefault();
         console.log(searchValue)
-
         setSearchValue("")
     }
 
@@ -72,10 +70,10 @@ function Home() {
                                 <p>Account</p>
                             </a>
                             :
-                            <a onClick={signIn}>
+                            <div onClick={signIn}>
                                 <img src={user.photo} alt="" />
                                 <p>Account</p>
-                            </a>
+                            </div>
                         }
 
                         <Link to={"/"}>

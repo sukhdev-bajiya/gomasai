@@ -63,7 +63,8 @@
 }
 
 
-.home__navbarAppList>a {
+.home__navbarAppList>a,
+.home__navbarAppList>div {
     text-decoration: none;
     color: #202124;
     display: flex;
@@ -75,11 +76,13 @@
     border-radius: 5px;
 }
 
-.home__navbarAppList>a:hover {
+.home__navbarAppList>a:hover,
+.home__navbarAppList>div:hover {
     background-color: lightgrey;
 }
 
-.home__navbarAppList>a:first-child>img {
+.home__navbarAppList>a:first-child>img,
+.home__navbarAppList>div:first-child>img {
     border-radius: 50px;
     width: 30px;
     height: 30px;
@@ -90,7 +93,8 @@
     height: 30px;
 }
 
-.home__navbarAppList>a>p {
+.home__navbarAppList>a>p,
+.home__navbarAppList>div>p {
     margin-top: 5px;
     font-size: 14px;
 }
@@ -246,40 +250,114 @@
 }
 
 @media only screen and (max-width: 319px) {
-    .home__gomasaiSection form {
-        position: absolute;
-        top: 130px;
-        left: 25%;
-        width: 60%;
-        height: 60px;
+    .home__navbarAppPart {
+        width: 20px;
+        height: 20px;
     }
 
-    .home__gomasaiSection form input[type="text"] {
-        margin-top: -8%;
-        margin-left: 28%;
+    .home__navbarLoginPartImg {
+        width: 25px;
+        height: 25px;
     }
 
-    .home__gomasaiSection form input[type="submit"] {
-        font-size: 55px;
-        margin-top: -30px;
+    .home__navbar>a {
+        font-size: 12px;
     }
-}
 
+    .home__navbarAppList {
+        height: 300px;
+        width: 200px;
+        padding: 5px;
+        gap: 2px;
+    }
 
-@media only screen and (min-width: 320px) and (max-width: 612px) {
+    .home__navbarAppList>a,
+    .home__navbarAppList>div {
+        padding: 5px;
+        width: 55px;
+        border-radius: 3px;
+        font-size: 12px;
+    }
+
     .home__gomasaiSection form {
         position: absolute;
         top: 35vh;
         left: 20%;
         width: 70%;
-        /* height: 60px; */
+        display: flex;
+        align-items: center;
+    }
+
+    .home__gomasaiSection form .home__backGroundIcon {
+        top: -160px;
+        left: -17px;
+    }
+
+    .home__gomasaiSection form input[type="text"] {
+        border: none;
+        outline: none;
+        font-size: 12px;
+        padding: 8px 15px;
+        margin: 0;
+        margin-top: -20%;
+        margin-right: 5px;
+        border-bottom: 1px solid #e31b46;
+        border-radius: 15px;
+        color: black;
+    }
+
+    .home__gomasaiSection form input[type="submit"] {
+        z-index: 3;
+        font-size: 35px;
+        height: 90px;
+        width: 90px;
+        position: absolute;
+        right: 5%;
+        margin-top: -20%;
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 612px) {
+    .home__navbarAppPart {
+        width: 28px;
+        height: 28px;
+    }
+
+    .home__navbarLoginPartImg {
+        width: 35px;
+        height: 35px;
+    }
+
+    .home__navbar>a {
+        font-size: 15px;
+    }
+
+    .home__navbarAppList {
+        width: 230px;
+        padding: 5px;
+        gap: 2px;
+    }
+
+    .home__navbarAppList>a,
+    .home__navbarAppList>div {
+        padding: 5px;
+        width: 65px;
+        border-radius: 3px;
+        font-size: 12px;
+    }
+
+
+    .home__gomasaiSection form {
+        position: absolute;
+        top: 35vh;
+        left: 20%;
+        width: 70%;
         display: flex;
         align-items: center;
     }
 
     .home__gomasaiSection form .home__backGroundIcon {
         width: 70%;
-        /* right: 13px; */
         top: -160px;
         left: 26px;
     }
@@ -352,14 +430,12 @@
 @media only screen and (min-width: 813px) and (max-width: 1250px) {
     .home__gomasaiSection form {
         position: absolute;
-        /* top: 39vh; */
         top: 150px;
         left: 20%;
         width: 70%;
         height: 60px;
         display: flex;
         align-items: center;
-        /* position: relative; */
     }
 
     .home__gomasaiSection form input[type="text"] {
