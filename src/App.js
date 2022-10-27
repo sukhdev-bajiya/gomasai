@@ -7,6 +7,9 @@ import News from "./Pages/News/News"
 import Images from "./Pages/Images/Images"
 import Maps from "./Pages/Maps/Maps"
 import Videos from "./Pages/Videos/Videos"
+import Translate from "./Pages/Translate/Translate"
+import Shopping from "./Pages/Shopping/Shopping"
+import Books from "./Pages/Books/Books"
 
 function App() {
   return (
@@ -18,6 +21,9 @@ function App() {
       <Route path="/images" element={<><Navbar /><Images /></>} />
       <Route path="/maps" element={<><Navbar /><Maps /></>} />
       <Route path="/videos" element={<><Navbar /><Videos /></>} />
+      <Route path="/translate" element={<><Navbar /><Translate /></>} />
+      <Route path="/shopping" element={<><Navbar /><Shopping /></>} />
+      <Route path="/books" element={<><Navbar /><Books /></>} />
     </Routes>
 
   );
