@@ -7,6 +7,8 @@ import SpeakerOnIcon from '../../assets/images/sound02.png'
 import SpeakerOffIcon from '../../assets/images/sound01.png'
 import { useSelector, useDispatch } from "react-redux";
 import { setTranslate } from "../../Redux/action";
+import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
+import { useSpeechSynthesis } from 'react-speech-kit';
 
 function Translate() {
     const { translate } = useSelector((state) => state);
@@ -17,6 +19,8 @@ function Translate() {
     const [inputData, setInputData] = React.useState("")
     const [outputData, setOutputData] = React.useState("")
     const [historyShow, setHistoryShow] = React.useState(false)
+
+    const { speak } = useSpeechSynthesis();
 
     React.useEffect(() => {
         activePage("translate__page")
@@ -67,6 +71,24 @@ function Translate() {
         dispatch(setTranslate(translate))
     }
 
+    const {
+        transcript,
+        resetTranscript,
+        listening,
+        browserSupportsSpeechRecognition
+    } = useSpeechRecognition();
+
+    if (!browserSupportsSpeechRecognition) {
+        return <span>Browser doesn't support speech recognition.</span>;
+    }
+
+    const speechRecognitionStartListening = () => {
+        SpeechRecognition.startListening();
+    }
+    const speechRecognitionStopListening = () => {
+        SpeechRecognition.stopListening();
+    }
+
     return (
         <div className="translate__page">
             <div className='translate__buttons'>
@@ -101,21 +123,28 @@ function Translate() {
                     <div className='translate__textareaandicon'>
                         <textarea name="" id="translate__inputtextarea" value={inputData} cols="50" rows="10" onChange={(e) => setInputData(e.target.value)}></textarea>
                         <div>
-                            {false ?
-                                <img src={MicOnIcon} alt="" />
+                            {listening ?
+                                <img onClick={() => { speechRecognitionStopListening() }} src={MicOnIcon} alt="" />
                                 :
-                                <img src={MicOffIcon} alt="" />
+                                <img onClick={() => { speechRecognitionStartListening() }} src={MicOffIcon} alt="" />
                             }
 
                             {true ?
-                                <img src={SpeakerOnIcon} alt="" />
+                                <img onClick={() => speak({ text: inputData })} src={SpeakerOnIcon} alt="" />
                                 :
                                 <img src={SpeakerOffIcon} alt="" />
                             }
                         </div>
                     </div>
+                    <div className='translate__microphone'>
+                        <button onClick={() => setInputData(inputData + " " + transcript)}> Add Text </button>
+                        {transcript !== "" ? <button onClick={resetTranscript}>Reset</button> : ""}
+                        <p>{transcript}</p>
+                    </div>
                 </div>
+
                 <p className='translate__liftright'> &#x21cc;</p>
+
                 <div className='translate__output'>
                     <select name="outputLanguage" value={outputLanguage} onChange={(e) => setOutputLanguage(e.target.value)}>
                         <option value="en">English</option>
@@ -140,7 +169,7 @@ function Translate() {
                         <textarea name="" id="translate__outputtextarea" cols="50" rows="10" value={outputData} disabled></textarea>
                         <div>
                             {true ?
-                                <img src={SpeakerOnIcon} alt="" />
+                                <img onClick={() => speak({ text: outputData })} src={SpeakerOnIcon} alt="" />
                                 :
                                 <img src={SpeakerOffIcon} alt="" />
                             }

@@ -36,6 +36,7 @@
 
 .translate__textareaandicon>div img {
     height: 20px;
+    cursor: pointer;
 }
 
 .translate__part>div textarea {
@@ -128,6 +129,32 @@
 .translate__historyDataTable svg {
     height: 25px;
     cursor: pointer;
+}
+
+.translate__microphone {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap-reverse;
+}
+
+.translate__microphone button {
+    background-color: #a8c4f8;
+    border: none;
+    color: rgb(0, 0, 0);
+    padding: 5px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    transition: all 0.5s ease-in-out;
+    border-radius: 3px;
+}
+
+.translate__microphone button:hover {
+    background-color: #0058fc;
+    color: rgb(255, 255, 255);
 }
 
 @media all and (max-width: 1000px) {
