@@ -1,9 +1,11 @@
 import {
-    SET_USER
+    SET_USER,
+    SET_TRANSLATE
 } from "./action";
 
 const initState = {
-    userlog: null
+    userlog: null,
+    translate: []
 };
 
 export const reducer = (state = initState, { type, payload }) => {
@@ -12,6 +14,12 @@ export const reducer = (state = initState, { type, payload }) => {
             return {
                 ...state,
                 userlog: payload
+            };
+
+        case SET_TRANSLATE:
+            return {
+                ...state,
+                translate: payload
             };
 
         default:
