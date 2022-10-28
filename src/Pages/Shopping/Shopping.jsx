@@ -1,8 +1,16 @@
 import React from 'react'
+import './Shopping.css'
+import activePage from '../../Compenent/ActivePage/ActivePage'
+
 
 function Shopping() {
+
+    React.useEffect(() => {
+        activePage("shopping__page")
+    }, []);
+
     return (
-        <div>Shopping</div>
+        <div className='shopping__page'>Shopping</div>
     )
 }
 

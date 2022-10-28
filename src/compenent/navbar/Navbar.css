@@ -1,3 +1,14 @@
+.NavBarMainContainer {
+  position: fixed;
+  width: 100%;
+  background-color: white;
+  z-index: 5;
+}
+
+.navbar__bottom {
+  height: 120px;
+}
+
 .NavBarSearchDiv {
   display: flex;
   align-items: center;
@@ -16,7 +27,6 @@
 .NavBarSearchDiv>form {
   display: flex;
   align-items: center;
-
   height: 44px;
   border-radius: 25px;
   padding: 0 10px;
@@ -68,7 +78,8 @@
   border-bottom: 0.5px solid gray;
 }
 
-#navbarBottomPart a {
+#navbarBottomPart a,
+#navbarBottomPart span {
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -78,11 +89,56 @@
   color: #5f6368;
 }
 
-#navbarBottomPart a svg {
+#navbarBottomPart a svg,
+#navbarBottomPart span svg {
   height: 20px;
 }
 
+#more__page {
+  position: relative;
+}
+
+#more__page>div {
+  display: none;
+  position: absolute;
+  top: 25px;
+  right: 0;
+  flex-direction: column;
+  padding: 10px 0;
+  border-radius: 5px;
+  gap: 10px;
+}
+
+#more__page>div>a {
+  background-color: white;
+  padding: 5px 10px;
+}
+
+#more__page>div>a:hover {
+  background-color: lightgray;
+}
+
+#more__page:hover>div {
+  display: flex;
+}
+
+
+.active__page {
+  color: blue !important;
+  font-weight: 600;
+  fill: blue;
+  border-bottom: 5px solid blue;
+  padding-bottom: 10px;
+  margin-top: 15px;
+}
+
+
 @media all and (max-width: 1000px) {
+
+  .navbar__bottom {
+    height: 135px;
+  }
+
   .NavBarSearchDiv>img {
     width: 150px;
   }
@@ -92,9 +148,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    height: 120px;
+    height: 95px;
     width: 100%;
-
     border-bottom: 1px solid black;
   }
 
@@ -118,7 +173,8 @@
     border-right: 1px solid gray;
   }
 
-  #navbarBottomPart a svg {
+  #navbarBottomPart a svg,
+  #navbarBottomPart span svg {
     height: 14px;
   }
 
@@ -127,7 +183,8 @@
     margin: 0 10px;
   }
 
-  #navbarBottomPart a {
+  #navbarBottomPart a,
+  #navbarBottomPart span {
     gap: 5px;
     font-size: 14px;
   }
@@ -139,7 +196,7 @@
     width: 100%;
     padding: 0 5%;
     gap: 10px;
-    height: 50px;
+    height: 38px;
     border-bottom: 0.5px solid gray;
   }
 }

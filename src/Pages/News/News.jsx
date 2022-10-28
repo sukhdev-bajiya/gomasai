@@ -1,8 +1,14 @@
 import React from 'react'
 import "./News.css"
+import activePage from '../../Compenent/ActivePage/ActivePage'
+
 function News() {
+    React.useEffect(() => {
+        activePage("news__page")
+    }, []);
+
     return (
-        <div>News</div>
+        <div className='news__page'>News</div>
     )
 }
 

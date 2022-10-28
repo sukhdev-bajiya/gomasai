@@ -249,6 +249,45 @@
     text-transform: uppercase;
 }
 
+.home__mayIHelpYou {
+    display: grid;
+    place-content: center;
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+    height: 75px;
+    width: 75px;
+    padding: 5px;
+}
+
+.home__mayIHelpYou img {
+    width: 100%;
+    cursor: pointer;
+}
+
+.home__mayIHelpYou .home__mayihelpyouText {
+    display: none;
+    position: absolute;
+    top: -50px;
+    right: 5px;
+    text-align: center;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+    width: 100px;
+    background-color: rgba(211, 211, 211, 0.651);
+    border-radius: 5px;
+}
+
+.home__mayIHelpYou:hover .home__mayihelpyouText {
+    display: block;
+}
+
+.home__mayIHelpYou .home__mayihelpyouMessengerBox {
+    display: none;
+}
+
+
+
 @media only screen and (max-width: 319px) {
     .home__navbarAppPart {
         width: 20px;

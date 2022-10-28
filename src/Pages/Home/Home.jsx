@@ -4,21 +4,19 @@ import GoMasaiLogo from "../../assets/images/gomasai.png";
 // import GoMasaiLogo from "../../assets/images/gomasaiLogo.png";
 import { Link } from 'react-router-dom';
 import { auth, provider } from '../../Redux/Firebase'
-import { actionTypes } from "../../Redux/reducer"
-import { useStateValue } from '../../Redux/StateProvider'
-
+import { useDispatch } from "react-redux";
+// import { useSelector, useDispatch } from "react-redux";
+import { setUserlog } from "../../Redux/action";
 
 function Home() {
-    const [userData, dispatch] = useStateValue();
+    // const { userlog } = useSelector((state) => state);
+    const dispatch = useDispatch();
     const signIn = () => {
         auth.signInWithPopup(provider)
             .then(res => userDataAddInDatabase(res.user.multiFactor.user))
             .catch(err => alert(err));
     }
 
-    if (userData === null) {
-        console.log("Welcome to the Home")
-    }
 
     const [user, setUser] = React.useState(JSON.parse(localStorage.getItem('userlogindata')) || {
         userauth: false,
@@ -36,10 +34,7 @@ function Home() {
             photo: data.photoURL
         }
 
-        dispatch({
-            type: actionTypes.SET_USER,
-            user: data
-        })
+        dispatch(setUserlog(data))
 
         localStorage.setItem('userlogindata', JSON.stringify(userObject))
         setUser(userObject)
@@ -244,6 +239,13 @@ function Home() {
                     <input type="submit" value="&#9740;" />
                     <img src={GoMasaiLogo} className="home__backGroundIcon" alt="" />
                 </form>
+            </div>
+            <div className='home__mayIHelpYou'>
+                <img src="https://gold-ca-api.blallab.com/public/uploads/core_values/1658824503393.png" alt="" />
+
+                <p className='home__mayihelpyouText'>May I Help You!</p>
+                <div className='home__mayihelpyouMessengerBox'>
+                </div>
             </div>
         </>
     )
