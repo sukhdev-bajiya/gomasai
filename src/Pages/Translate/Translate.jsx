@@ -88,6 +88,10 @@ function Translate() {
     const speechRecognitionStopListening = () => {
         SpeechRecognition.stopListening();
     }
+    const addText = () => {
+        setInputData(inputData + " " + transcript);
+        resetTranscript();
+    }
 
     return (
         <div className="translate__page">
@@ -137,7 +141,7 @@ function Translate() {
                         </div>
                     </div>
                     <div className='translate__microphone'>
-                        <button onClick={() => setInputData(inputData + " " + transcript)}> Add Text </button>
+                        <button onClick={addText}> Add Text </button>
                         {transcript !== "" ? <button onClick={resetTranscript}>Reset</button> : ""}
                         <p>{transcript}</p>
                     </div>
