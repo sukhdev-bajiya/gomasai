@@ -10,6 +10,7 @@ import Videos from "./Pages/Videos/Videos"
 import Translate from "./Pages/Translate/Translate"
 import Shopping from "./Pages/Shopping/Shopping"
 import Books from "./Pages/Books/Books"
+import Account from "./Pages/Account/Account"
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
       <Route path="/translate" element={<><Navbar /><Translate /></>} />
       <Route path="/shopping" element={<><Navbar /><Shopping /></>} />
       <Route path="/books" element={<><Navbar /><Books /></>} />
+      <Route path="/account" element={<><Navbar /><Account /></>} />
     </Routes>
 
   );

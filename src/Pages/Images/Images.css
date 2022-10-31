@@ -1,3 +1,61 @@
 .images__page {
     padding: 5px 5%;
 }
+
+.images__imageData {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.images__imageData img {
+    width: 100%;
+}
+
+.images__imagePagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px 0;
+}
+
+.images__imagePagination span {
+    color: rgb(0, 0, 0);
+    padding: 8px 25px;
+    text-align: center;
+    font-size: 16px;
+    border-top: 1px solid rgb(0, 0, 0);
+    border-bottom: 1px solid rgb(0, 0, 0);
+    letter-spacing: 0.5px;
+    transition: all 0.5s ease-in-out;
+}
+
+.images__imagePagination button {
+    background-color: #a8c4f8;
+    border: none;
+    color: rgb(0, 0, 0);
+    padding: 0px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 36px;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    transition: all 0.5s ease-in-out;
+}
+
+.images__imagePagination button:disabled {
+    background-color: lightgray;
+}
+
+.images__imagePagination button:disabled:hover {
+    background-color: lightgray;
+    color: black;
+}
+
+.images__imagePagination button:hover {
+    background-color: #0058fc;
+    color: rgb(255, 255, 255);
+}

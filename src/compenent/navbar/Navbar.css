@@ -106,7 +106,6 @@
   flex-direction: column;
   padding: 10px 0;
   border-radius: 5px;
-  gap: 10px;
 }
 
 #more__page>div>a {
@@ -122,7 +121,6 @@
   display: flex;
 }
 
-
 .active__page {
   color: blue !important;
   font-weight: 600;
@@ -132,6 +130,9 @@
   margin-top: 15px;
 }
 
+#more__page .active__page {
+  margin-top: 0px;
+}
 
 @media all and (max-width: 1000px) {
 

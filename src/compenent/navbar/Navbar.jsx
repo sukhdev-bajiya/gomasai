@@ -1,15 +1,48 @@
 import React from "react";
 import "./Navbar.css";
 import GoMasai from "../../assets/images/navbarlogo.png";
-import MicIcon from "../../assets/images/micicon.png";
+import MicOnIcon from '../../assets/images/miciconon.png'
+import MicOffIcon from '../../assets/images/micicon.png'
+import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
-const Navbar = () => {
+import { setSearchinput } from "../../Redux/action";
+import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
 
-  const [searchValue, setSearchValue] = React.useState("");
+const Navbar = () => {
+  const { navbar_searchValur } = useSelector((state) => state);
+  const dispatch = useDispatch();
+
+  const [searchValue, setSearchValue] = React.useState(navbar_searchValur);
 
   const searchResult = (event) => {
     event.preventDefault();
-    console.log(searchValue)
+    dispatch(setSearchinput(searchValue))
+  }
+
+  const {
+    transcript,
+    finalTranscript,
+    listening,
+    browserSupportsSpeechRecognition
+  } = useSpeechRecognition();
+
+  React.useEffect(() => {
+    if (searchValue !== "") {
+      setSearchValue(searchValue + " " + transcript);
+    } else {
+      setSearchValue(transcript);
+    }
+  }, [finalTranscript]);
+
+  if (!browserSupportsSpeechRecognition) {
+    return <span>Browser doesn't support speech recognition.</span>;
+  }
+  const speechRecognitionStartListening = () => {
+    SpeechRecognition.startListening();
+  }
+  const speechRecognitionStopListening = () => {
+    SpeechRecognition.stopListening();
+
   }
 
   return (
@@ -19,7 +52,11 @@ const Navbar = () => {
           <img src={GoMasai} alt="GoMasai"></img>
           <form onSubmit={searchResult}>
             <input type="text" placeholder="Search..." value={searchValue} onChange={(e) => setSearchValue(e.target.value)} />
-            <img src={MicIcon} alt="Mic Icon"></img>
+            {listening ?
+              <img onClick={() => { speechRecognitionStopListening() }} src={MicOnIcon} alt="" />
+              :
+              <img onClick={() => { speechRecognitionStartListening() }} src={MicOffIcon} alt="" />
+            }
             <input type="submit" value="&#9740;" />
           </form>
         </div>
