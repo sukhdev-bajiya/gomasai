@@ -1,0 +1,203 @@
+.NavBarMainContainer {
+  position: fixed;
+  width: 100%;
+  background-color: white;
+  z-index: 5;
+}
+
+.navbar__bottom {
+  height: 120px;
+}
+
+.NavBarSearchDiv {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  width: 100%;
+  padding: 0 5%;
+  border-bottom: 0.005px solid rgb(148, 133, 133);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.NavBarSearchDiv>img {
+  width: 180px;
+}
+
+.NavBarSearchDiv>form {
+  display: flex;
+  align-items: center;
+  height: 44px;
+  border-radius: 25px;
+  padding: 0 10px;
+  box-shadow: 0 2px 5px 1px rgb(64 60 67 / 16%);
+}
+
+.NavBarSearchDiv>form:hover {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.NavBarSearchDiv>form>img {
+  width: 20px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.NavBarSearchDiv>form>input:first-child {
+  font-size: 16px;
+  padding: 5px 10px;
+  width: 415px;
+  border: none;
+  outline: none;
+  background: none;
+  border-right: 1px solid gray;
+}
+
+.NavBarSearchDiv>form>input[type="submit"] {
+  background: none;
+  border: none;
+  border-radius: 50%;
+  color: #e31b46;
+  cursor: pointer;
+  font-size: 47px;
+  font-weight: 500;
+  transform: rotate(100deg);
+  z-index: 1;
+  height: 50px;
+  width: 46px;
+  margin: 5px;
+}
+
+#navbarBottomPart {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0 5%;
+  gap: 20px;
+  height: 50px;
+  border-bottom: 0.5px solid gray;
+}
+
+#navbarBottomPart a,
+#navbarBottomPart span {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 18px;
+  letter-spacing: 1px;
+  color: #5f6368;
+}
+
+#navbarBottomPart a svg,
+#navbarBottomPart span svg {
+  height: 20px;
+}
+
+#more__page {
+  position: relative;
+}
+
+#more__page>div {
+  display: none;
+  position: absolute;
+  top: 25px;
+  right: 0;
+  flex-direction: column;
+  padding: 10px 0;
+  border-radius: 5px;
+}
+
+#more__page>div>a {
+  background-color: white;
+  padding: 5px 10px;
+}
+
+#more__page>div>a:hover {
+  background-color: lightgray;
+}
+
+#more__page:hover>div {
+  display: flex;
+}
+
+.active__page {
+  color: blue !important;
+  font-weight: 600;
+  fill: blue;
+  border-bottom: 5px solid blue;
+  padding-bottom: 10px;
+  margin-top: 15px;
+}
+
+#more__page .active__page {
+  margin-top: 0px;
+}
+
+@media all and (max-width: 1000px) {
+
+  .navbar__bottom {
+    height: 135px;
+  }
+
+  .NavBarSearchDiv>img {
+    width: 150px;
+  }
+
+  .NavBarSearchDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 95px;
+    width: 100%;
+    border-bottom: 1px solid black;
+  }
+
+  .NavBarSearchDiv>form>input[type="submit"] {
+    font-size: 30px;
+    border-radius: 50%;
+    font-weight: 300;
+  }
+
+  .NavBarSearchDiv>form {
+    height: 40px;
+  }
+
+  .NavBarSearchDiv>form>input:first-child {
+    font-size: 16px;
+    padding: 5px 10px;
+    width: 250px;
+    border: none;
+    outline: none;
+    background: none;
+    border-right: 1px solid gray;
+  }
+
+  #navbarBottomPart a svg,
+  #navbarBottomPart span svg {
+    height: 14px;
+  }
+
+  .NavBarSearchDiv>form>img {
+    width: 15px;
+    margin: 0 10px;
+  }
+
+  #navbarBottomPart a,
+  #navbarBottomPart span {
+    gap: 5px;
+    font-size: 14px;
+  }
+
+  #navbarBottomPart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0 5%;
+    gap: 10px;
+    height: 38px;
+    border-bottom: 0.5px solid gray;
+  }
+}

@@ -1,0 +1,138 @@
+.images__page {
+    padding: 5px 5%;
+}
+
+.images__imageDataPart>p {
+    text-align: center;
+    font-size: 24px;
+    margin: 25px 0;
+}
+
+.images__imageData {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.images__imageData img {
+    width: 100%;
+}
+
+.images__imagePagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px 0;
+}
+
+.images__imagePagination span {
+    color: rgb(0, 0, 0);
+    padding: 8px 25px;
+    text-align: center;
+    font-size: 16px;
+    border-top: 1px solid rgb(0, 0, 0);
+    border-bottom: 1px solid rgb(0, 0, 0);
+    letter-spacing: 0.5px;
+    transition: all 0.5s ease-in-out;
+}
+
+.images__imagePagination button {
+    background-color: #a8c4f8;
+    border: none;
+    color: rgb(0, 0, 0);
+    padding: 0px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 36px;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    transition: all 0.5s ease-in-out;
+}
+
+.images__imagePagination button:disabled {
+    background-color: lightgray;
+}
+
+.images__imagePagination button:disabled:hover {
+    background-color: lightgray;
+    color: black;
+}
+
+.images__imagePagination button:hover {
+    background-color: #0058fc;
+    color: rgb(255, 255, 255);
+}
+
+.images__imageItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.like_cls-1 {
+    fill-rule: evenodd;
+}
+
+.images__imageItemInfo {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-weight: 500;
+}
+
+.images__imageItemInfo span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.images__imageItemInfo span:first-child {
+    color: #c100fc;
+    fill: #c100fc;
+}
+
+.images__imageItemInfo span:last-child {
+    color: #fc8600;
+    fill: #fc8600;
+}
+
+.images__imageItemInfo span:hover {
+    color: black;
+}
+
+.images__imageData svg {
+    width: 21px;
+    height: 21px;
+    margin: 0 5px;
+}
+
+.images__imageData p {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin: 10px 0;
+    font-weight: 500;
+}
+
+.images__imageItemImage {
+    width: 100%;
+    max-height: 200px;
+    margin-bottom: 5px;
+    overflow: hidden;
+}
+
+.images__imageItemImage img {
+    cursor: pointer;
+    transition: all 0.6s ease-in-out;
+}
+
+.images__imageItemImage:hover img {
+    transform: scale(1.1);
+}
