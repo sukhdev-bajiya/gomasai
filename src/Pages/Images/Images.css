@@ -136,3 +136,27 @@
 .images__imageItemImage:hover img {
     transform: scale(1.1);
 }
+
+@media only screen and (max-width: 450px) {
+    .images__imageData {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 15px;
+    }
+}
+
+@media only screen and (min-width: 451px) and (max-width: 800px) {
+    .images__imageData {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+}
+
+@media only screen and (min-width: 801px) and (max-width: 1100px) {
+    .images__imageData {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+    }
+}
