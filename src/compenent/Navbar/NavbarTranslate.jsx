@@ -11,7 +11,7 @@ const Navbar = () => {
         <div className="NavBarSearchDiv">
           <img src={GoMasai} alt="GoMasai"></img>
           <form id="navbar__inputform">
-            <input type="text" placeholder="Search..." value="" />
+            <input type="text" placeholder="Search..." />
             <img src={MicOffIcon} alt="" />
             <input type="submit" value="&#9740;" />
           </form>
