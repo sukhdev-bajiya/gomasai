@@ -6,9 +6,13 @@
 
 - Type the text in the search box to see the results.
 - Click on Gmail to open your mailbox 📧.
+<<<<<<< HEAD
 
   <!-- ![image](https://cdn.hashnode.com/res/hashnode/image/upload/v1660328261913/KxHVMNIOf.png) -->
 
+=======
+  <!-- ![image](https://cdn.hashnode.com/res/hashnode/image/upload/v1660328261913/KxHVMNIOf.png) -->
+>>>>>>> dafc2440ab0cb41204bcd31d3e94e5eda5cdcb19
   ![image](https://user-images.githubusercontent.com/106476212/185294277-f3ac68b7-07b9-471f-a2aa-80127f32f44e.png)
 
 ## 📋 Result page
