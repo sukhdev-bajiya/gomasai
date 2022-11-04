@@ -9,6 +9,7 @@
     position: fixed;
     left: 105%;
     background-color: #ffffff;
+    z-index: 5;
 }
 
 .news__searchForm {
