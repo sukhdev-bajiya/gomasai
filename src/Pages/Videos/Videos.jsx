@@ -1,8 +1,9 @@
 import React from 'react'
 import "./Videos.css"
-import activePage from '../../Compenent/ActivePage/ActivePage'
+import activePage from '../../compenent/ActivePage/ActivePage'
 
 function Videos() {
+
     React.useEffect(() => {
         activePage("videos__page")
     }, []);

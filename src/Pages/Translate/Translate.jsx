@@ -1,6 +1,6 @@
 import React from 'react'
 import './Translate.css'
-import activePage from '../../Compenent/ActivePage/ActivePage'
+import activePage from '../../compenent/ActivePage/ActivePage'
 import MicOnIcon from '../../assets/images/miciconon.png'
 import MicOffIcon from '../../assets/images/micicon.png'
 import SpeakerOnIcon from '../../assets/images/sound02.png'
@@ -9,6 +9,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { setTranslate } from "../../Redux/action";
 import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
 import { useSpeechSynthesis } from 'react-speech-kit';
+
 
 function Translate() {
     const { translate } = useSelector((state) => state);
@@ -23,12 +24,12 @@ function Translate() {
     const { speak } = useSpeechSynthesis();
 
     React.useEffect(() => {
-        activePage("translate__page")
+        activePage("translate__page");
     }, []);
 
     const convertText = async () => {
         try {
-            const res = await fetch("https://translate.argosopentech.com/translate", {
+            const res = await fetch(process.env.REACT_APP_TRANSLATE_URL, {
                 method: "POST",
                 body: JSON.stringify({
                     q: inputData,

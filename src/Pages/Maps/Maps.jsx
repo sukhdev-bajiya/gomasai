@@ -1,6 +1,6 @@
 import React from 'react'
 import "./Maps.css"
-import activePage from '../../Compenent/ActivePage/ActivePage'
+import activePage from '../../compenent/ActivePage/ActivePage'
 import { useSelector } from 'react-redux';
 
 function Maps() {

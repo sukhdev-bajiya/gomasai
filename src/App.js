@@ -1,5 +1,6 @@
 import "./App.css";
-import { Navbar } from "./Compenent/Navbar/Navbar";
+import Navbar from "./compenent/Navbar/Navbar";
+import NavbarTranslate from "./compenent/Navbar/NavbarTranslate";
 import { Routes, Route } from "react-router-dom";
 import Home from "./Pages/Home/Home"
 import Result from "./Pages/Result/Result"
@@ -13,16 +14,18 @@ import Books from "./Pages/Books/Books"
 import Account from "./Pages/Account/Account"
 
 function App() {
+
+
   return (
 
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/result" element={<><Navbar /><Result /></>} />
-      <Route path="/news" element={<><Navbar /><News /></>} />
+      <Route path="/news" element={<><NavbarTranslate /><News /></>} />
       <Route path="/images" element={<><Navbar /><Images /></>} />
       <Route path="/maps" element={<><Navbar /><Maps /></>} />
       <Route path="/videos" element={<><Navbar /><Videos /></>} />
-      <Route path="/translate" element={<><Navbar /><Translate /></>} />
+      <Route path="/translate" element={<><NavbarTranslate /><Translate /></>} />
       <Route path="/shopping" element={<><Navbar /><Shopping /></>} />
       <Route path="/books" element={<><Navbar /><Books /></>} />
       <Route path="/account" element={<><Navbar /><Account /></>} />

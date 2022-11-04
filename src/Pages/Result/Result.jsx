@@ -1,6 +1,6 @@
 import React from 'react'
 import "./Result.css"
-import activePage from '../../Compenent/ActivePage/ActivePage'
+import activePage from '../../compenent/ActivePage/ActivePage'
 import { useDispatch, useSelector } from 'react-redux';
 import { setLoaderspinner } from '../../Redux/action';
 import loaderspinnergif from '../../assets/gif/loaderspinnergif.gif'
@@ -11,6 +11,8 @@ function Result() {
 
     React.useEffect(() => {
         activePage("result__page")
+
+
         dispatch(setLoaderspinner(true))
 
         setTimeout(() => {

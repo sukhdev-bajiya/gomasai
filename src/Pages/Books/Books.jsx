@@ -1,6 +1,6 @@
 import React from 'react'
 import './Books.css'
-import activePage from '../../Compenent/ActivePage/ActivePage'
+import activePage from '../../compenent/ActivePage/ActivePage'
 
 function Books() {
     React.useEffect(() => {
