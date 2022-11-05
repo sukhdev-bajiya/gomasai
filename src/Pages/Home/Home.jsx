@@ -2,7 +2,7 @@ import React from 'react'
 import "./Home.css"
 import GoMasaiLogo from "../../assets/images/gomasai.png";
 // import GoMasaiLogo from "../../assets/images/gomasaiLogo.png";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { auth, provider } from '../../Redux/Firebase'
 import { useSelector, useDispatch } from "react-redux";
 import { setSearchinput, setUserlog } from "../../Redux/action";
@@ -10,12 +10,14 @@ import { setSearchinput, setUserlog } from "../../Redux/action";
 function Home() {
     const { navbar_searchValur } = useSelector((state) => state);
     const dispatch = useDispatch();
+    const navigate = useNavigate();
 
     const [searchValue, setSearchValue] = React.useState(navbar_searchValur);
 
     const searchResult = (event) => {
         event.preventDefault();
         dispatch(setSearchinput(searchValue))
+        navigate("/result")
     }
 
     const signIn = () => {
