@@ -43,6 +43,7 @@ bower_components
 
 # Compiled binary addons (http://nodejs.org/api/addons.html)
 build/Release
+/build
 
 # Dependency directories
 node_modules/
@@ -64,3 +65,8 @@ node_modules/
 
 # dotenv environment variables file
 .env
+
+
+
+# _redirects
+# /* /index.html 200
