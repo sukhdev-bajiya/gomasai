@@ -1,0 +1,55 @@
+.account__page {
+    padding: 5px 5%;
+    display: flex;
+    gap: 15px;
+}
+
+.account__accountLeftPart {
+    flex: 1;
+}
+
+.account__accountRightPart {
+    flex: 2;
+}
+
+.account__accountProfile {
+    height: 325px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.account__accountProfileImage {
+    position: relative;
+    height: 150px;
+}
+
+.account__accountProfileImage img {
+    position: absolute;
+    height: 125px;
+    border-top: 5px solid #EA4335;
+    border-left: 5px solid #34A853;
+    border-right: 5px solid #FBBC05;
+    border-bottom: 5px solid #4285F4;
+    border-radius: 75px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -10%);
+}
+
+.account__accountProfileInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.account__accountProfileInfo p:first-child {
+    font-weight: 700;
+}
+
+.account__accountProfileInfo p:nth-child(3) {
+    color: gray;
+}
