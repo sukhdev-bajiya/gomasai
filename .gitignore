@@ -66,5 +66,7 @@ node_modules/
 # dotenv environment variables file
 .env
 
+
+
 # _redirects
 # /* /index.html 200
