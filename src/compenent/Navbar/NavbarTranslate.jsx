@@ -71,7 +71,7 @@ const NavbarTranslate = () => {
                 </svg>
                 Books
               </Link>
-              <Link to="/shopping" id="shopping__page">
+              {/* <Link to="/shopping" id="shopping__page">
                 <svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 494.07 494.07" space="preserve">
                   <g id="XMLID_103_">
                     <path id="XMLID_109_" d="M68.693,96.362c26.596,0,48.166-21.566,48.166-48.178C116.858,21.566,95.289,0,68.693,0   C42.066,0,20.491,21.566,20.491,48.184C20.491,74.796,42.066,96.362,68.693,96.362z" />
@@ -81,7 +81,7 @@ const NavbarTranslate = () => {
                   </g>
                 </svg>
                 Shopping
-              </Link>
+              </Link> */}
             </div>
           </span>
         </div>
