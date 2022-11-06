@@ -193,13 +193,6 @@ function News() {
                 </div>
             </div>
 
-            {/* <div className='news__imagePagination'>
-
-                <button disabled={pageNumber <= 1 ? true : false} onClick={() => { return setpageNumber(pageNumber - 1), searchNewsData() }}> &#8612;</button>
-                <span>{pageNumber}</span>
-
-                <button disabled={Math.floor(imageData.totalArticles / 10) < pageNumber ? true : false} onClick={() => { return setpageNumber(pageNumber + 1), searchNewsData() }}> &#8614;</button>
-            </div> */}
         </div>
     )
 }

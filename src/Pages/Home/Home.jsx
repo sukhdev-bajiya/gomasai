@@ -40,7 +40,8 @@ function Home() {
             userauth: true,
             name: data.displayName,
             email: data.email,
-            photo: data.photoURL
+            photo: data.photoURL,
+            metadata: data.metadata
         }
 
         dispatch(setUserlog(data))

@@ -1,4 +1,5 @@
 function ResultList() {
+
     return [
         {
             titel: "Masai School - The Coding School that cares about you ...",

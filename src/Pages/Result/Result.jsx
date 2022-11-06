@@ -57,7 +57,6 @@ function Result() {
             </div>
             }
             <div className='result__resultRightPart'>
-
                 <div className='result__resultAdd1'>
                     <div className='result__resultAddImage'>
                         <img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/Downloader_1_c382f15ecf.png" alt="" />

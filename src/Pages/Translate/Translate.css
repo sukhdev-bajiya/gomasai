@@ -79,6 +79,7 @@
     transition: all 0.5s ease-in-out;
 }
 
+
 .translate__buttons button:hover {
     background-color: #0058fc;
     color: rgb(255, 255, 255);

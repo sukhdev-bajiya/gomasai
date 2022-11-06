@@ -4,7 +4,6 @@ import activePage from '../../compenent/ActivePage/ActivePage'
 import { useSelector } from 'react-redux';
 
 function Maps() {
-
     const { navbar_searchValur } = useSelector((state) => state);
 
     React.useEffect(() => {

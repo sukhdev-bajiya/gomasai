@@ -1,4 +1,5 @@
 function NewsItemsList() {
+
     return [
         {
             "title": "Google to discontinue Street View app next year",

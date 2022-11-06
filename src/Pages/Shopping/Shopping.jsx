@@ -5,6 +5,7 @@ import activePage from '../../compenent/ActivePage/ActivePage'
 
 function Shopping() {
 
+
     React.useEffect(() => {
         activePage("shopping__page")
     }, []);

@@ -10,7 +10,6 @@ function Videos() {
 
     const { loaderspinner, navbar_searchValur } = useSelector((state) => state);
     const dispatch = useDispatch();
-
     const [videoData, setVideoData] = React.useState({ items: itemsList() });
 
     React.useEffect(() => {

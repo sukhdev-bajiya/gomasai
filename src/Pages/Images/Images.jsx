@@ -62,7 +62,6 @@ function Images() {
                         </div>)}</div> : <p>Image for "{navbar_searchValur}" not found</p>
                     }
 
-
                     <div className='images__imagePagination'>
                         {/* PREVIOUS PAGE */}
                         <button disabled={pageNumber <= 1 ? true : false} onClick={() => setpageNumber(pageNumber - 1)}> &#8612;</button>

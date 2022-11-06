@@ -26,9 +26,9 @@ function App() {
       <Route path="/maps" element={<><Navbar /><Maps /></>} />
       <Route path="/videos" element={<><Navbar /><Videos /></>} />
       <Route path="/translate" element={<><NavbarTranslate /><Translate /></>} />
-      <Route path="/shopping" element={<><Navbar /><Shopping /></>} />
-      <Route path="/books" element={<><Navbar /><Books /></>} />
-      <Route path="/account" element={<><Navbar /><Account /></>} />
+      <Route path="/shopping" element={<><NavbarTranslate /><Shopping /></>} />
+      <Route path="/books" element={<><NavbarTranslate /><Books /></>} />
+      <Route path="/account" element={<><NavbarTranslate /><Account /></>} />
     </Routes>
 
   );

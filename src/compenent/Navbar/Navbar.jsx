@@ -45,7 +45,6 @@ const Navbar = () => {
   }
   const navbar_speechRecognitionStopListening = () => {
     SpeechRecognition.stopListening();
-
   }
 
   return (
