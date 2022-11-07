@@ -7,7 +7,7 @@
 - Type the text in the search box to see the results.
 - Click on Gmail to open your mailbox 📧.
 
-  ![image](https://user-images.githubusercontent.com/106476212/185294277-f3ac68b7-07b9-471f-a2aa-80127f32f44e.png)
+![image](https://user-images.githubusercontent.com/106476212/185294277-f3ac68b7-07b9-471f-a2aa-80127f32f44e.png)
 
 ## 📋 Result page
 
@@ -56,9 +56,9 @@
 
 ## Technology Used
 
-> • HTML
+> • React
 > • CSS
-> • JAVASCRIPT
+> • Redux
 > • DOM
 > • Local Storage
 > • JSON Server
