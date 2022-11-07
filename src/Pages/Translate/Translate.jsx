@@ -12,7 +12,6 @@ import { useSpeechSynthesis } from 'react-speech-kit';
 
 
 function Translate() {
-
     const { translate } = useSelector((state) => state);
     const dispatch = useDispatch();
 

@@ -7,13 +7,13 @@
 - Type the text in the search box to see the results.
 - Click on Gmail to open your mailbox 📧.
 
-  ![image](https://user-images.githubusercontent.com/106476212/185294277-f3ac68b7-07b9-471f-a2aa-80127f32f44e.png)
+![image](https://user-images.githubusercontent.com/106476212/200244476-d38c152a-dfe3-4532-b8f8-25b0dedf3bc3.png)
 
 ## 📋 Result page
 
 - Once you press Enter, the results of the text you have entered in the search bar will be displayed.
 
-![image](https://user-images.githubusercontent.com/106476212/187071386-5fe0b105-b596-4de3-bb9d-86c13f8575b8.png)
+![image](https://user-images.githubusercontent.com/106476212/200244646-c4c26c3d-6f0c-4ea8-bada-16ee1c0102d6.png)
 
 ## 📰 News page
 
@@ -44,33 +44,33 @@
 - You can click on the speaker 🔉 icon to listen to the entered text.
 - No communication barrier ever.
 
-![image](https://user-images.githubusercontent.com/106476212/185295688-e5b8997a-14d9-4b5a-8d8f-865dc8dafd44.png)
+![image](https://user-images.githubusercontent.com/106476212/200244834-97c82a7e-1703-44d1-8209-9a91124a6aca.png)
 
 ## Team Members
 
-> ### •[Sukhdev Bajiya](https://github.com/sukhdev-bajiya)
->
-> ### •[Akash Surve](https://github.com/Akash2377)
->
-> ### • [Ayush Kumar](https://github.com/ayush-kr05)
+### •[Sukhdev Bajiya](https://github.com/sukhdev-bajiya)
+
+### •[Akash Surve](https://github.com/Akash2377)
+
+### • [Ayush Kumar](https://github.com/ayush-kr05)
 
 ## Technology Used
 
-> • HTML
-> • CSS
-> • JAVASCRIPT
-> • DOM
-> • Local Storage
-> • JSON Server
+• React <br/>
+• CSS <br/>
+• Redux <br/>
+• DOM <br/>
+• Local Storage <br/>
+• JSON Server <br/>
 
 ## Tools
 
-> • VS Code
-> • Github
-> • Postman
-> • Netlify
-> • Firebase
-> • Heroku
+• VS Code <br/>
+• Github <br/>
+• Postman <br/>
+• Netlify <br/>
+• Firebase <br/>
+• Heroku <br/>
 
 ## Project link
 
