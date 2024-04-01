@@ -42,7 +42,7 @@ function Videos() {
                                 <p>{data.snippet.channelTitle}</p>
                                 {/* <p>{data.snippet.publishTime}</p> */}
                             </div>
-                            <button onClick={() => { return document.getElementById("videos__videoPlay").setAttribute("src", `https://www.youtube.com/embed/${data.id.videoId}`), document.getElementById("videos__videosPlayerPart").style.display = "grid" }}>Play Video</button>
+                            <button onClick={() => { return (document.getElementById("videos__videoPlay").setAttribute("src", `https://www.youtube.com/embed/${data.id.videoId}`), document.getElementById("videos__videosPlayerPart").style.display = "grid") }}>Play Video</button>
                         </div>
                     ) : <p>Video for "{navbar_searchValur}" not found</p>}
                 </div>
@@ -50,7 +50,7 @@ function Videos() {
 
             <div className='videos__videosPlayerPart' id='videos__videosPlayerPart'>
                 <span className='videos__videoscloseRed'>
-                    <img onClick={() => { return document.getElementById("videos__videosPlayerPart").style.display = "none", document.getElementById("videos__videoPlay").removeAttribute("src") }} src="https://img.icons8.com/color/344/close-window.png" alt="" />
+                    <img onClick={() => { return (document.getElementById("videos__videosPlayerPart").style.display = "none", document.getElementById("videos__videoPlay").removeAttribute("src")) }} src="https://img.icons8.com/color/344/close-window.png" alt="" />
                 </span>
                 <iframe id="videos__videoPlay" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
             </div>
