@@ -23,9 +23,10 @@ function Images() {
             dispatch(setLoaderspinner(true))
             fetch(`https://pixabay.com/api/?key=${process.env.REACT_APP_IMAGE_API_KEY}&q=${navbar_searchValur}&per_page=175&page=${pageNumber}`)
                 .then((res) => res.json())
-                .then((data) => { return setImageData(data), dispatch(setLoaderspinner(false)) })
+                .then((data) => { return (setImageData(data), dispatch(setLoaderspinner(false))) })
                 .catch((err) => console.log(err))
         }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [navbar_searchValur, pageNumber]);
 
     return (

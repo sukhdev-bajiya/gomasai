@@ -24,10 +24,11 @@ function Result() {
       )
         .then((res) => res.json())
         .then((res) => {
-          return setResultData(res), dispatch(setLoaderspinner(false));
+          return (setResultData(res), dispatch(setLoaderspinner(false)));
         })
         .catch((err) => console.log(err));
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [navbar_searchValur, pageNumber]);
 
   return (

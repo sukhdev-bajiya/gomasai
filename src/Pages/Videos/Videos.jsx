@@ -22,9 +22,10 @@ function Videos() {
             dispatch(setLoaderspinner(true))
             fetch(`https://youtube.googleapis.com/youtube/v3/search?type=video&part=snippet&maxResults=50&q=${navbar_searchValur}&key=${process.env.REACT_APP_VIDEO_API_KEY}`)
                 .then((res) => res.json())
-                .then((data) => { return setVideoData(data), dispatch(setLoaderspinner(false)) })
+                .then((data) => { return (setVideoData(data), dispatch(setLoaderspinner(false))) })
                 .catch((err) => console.log(err))
         }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [navbar_searchValur]);
 
     return (

@@ -35,6 +35,7 @@ const Navbar = () => {
       val = searchValue + " " + finalTranscript;
     }
     setSearchValue(val);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [finalTranscript]);
 
   if (!browserSupportsSpeechRecognition) {

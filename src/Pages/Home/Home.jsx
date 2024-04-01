@@ -3,7 +3,6 @@ import "./Home.css"
 import GoMasaiLogo from "../../assets/images/gomasai.png";
 // import GoMasaiLogo from "../../assets/images/gomasaiLogo.png";
 import { Link, useNavigate } from 'react-router-dom';
-import { auth, provider } from '../../Redux/Firebase'
 import { useSelector, useDispatch } from "react-redux";
 import { setSearchinput, setUserlog } from "../../Redux/action";
 
@@ -21,19 +20,17 @@ function Home() {
     }
 
     const signIn = () => {
-        auth.signInWithPopup(provider)
-            .then(res => userDataAddInDatabase(res.user.multiFactor.user))
-            .catch(err => alert(err));
     }
 
 
     const [user, setUser] = React.useState(JSON.parse(localStorage.getItem('userlogindata')) || {
         userauth: false,
-        name: "",
-        email: "",
+        name: "Guest",
+        email: "guest@gomasai.com",
         photo: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Circle-icons-profile.svg/1024px-Circle-icons-profile.svg.png"
     })
 
+    // eslint-disable-next-line no-unused-vars
     function userDataAddInDatabase(data) {
 
         let userObject = {
