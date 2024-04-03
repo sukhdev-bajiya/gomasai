@@ -7,7 +7,7 @@
 - Type the text in the search box to see the results.
 - Click on Gmail to open your mailbox 📧.
 
-![image](https://user-images.githubusercontent.com/106476212/200244476-d38c152a-dfe3-4532-b8f8-25b0dedf3bc3.png)
+![image](https://cdn.hashnode.com/res/hashnode/image/upload/v1712115223796/8b8cd5a5-9a43-4459-982e-dbd896c1e001.png?auto=compress,format&format=webp)
 
 ## 📋 Result page
 
