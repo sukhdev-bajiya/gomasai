@@ -75,8 +75,8 @@
 ## Project link
 
 > ### •[GoMasai Netlify](https://gomasai.netlify.app/)
->
-> ### •[GoMasai Firebase](https://gomasai.web.app/)
+
+<!-- > ### •[GoMasai Firebase](https://gomasai.web.app/) -->
 
 ## Blog link
 
